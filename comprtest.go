@@ -9,6 +9,7 @@ import (
 	"math/rand"
 	"os"
 	"time"
+	"nebutil"
 )
 
 type CompressMethod int
@@ -183,6 +184,8 @@ func main() {
 		totalComprSz += int64(comprCount)
 
 		pageCount++
+
+		nebutil.NebPrint("pageCount: %v\n", pageCount)
 	}
 
 	endTime := time.Now()
