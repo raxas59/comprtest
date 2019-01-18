@@ -1,5 +1,12 @@
 # comprtest
 
+debug.go defines nebutil.Nebprint as a function that does a real print by calling fmt.Printf.
+
+release.go defines nebutil.Nebprint as an empty function.
+comprtest.go just calls nebutil.Nebprint
+
+Depending on how we compile it (with tags debug or not), we will see the debug print.
+
 Sample output:
 
 hplinux@hplinux: 
